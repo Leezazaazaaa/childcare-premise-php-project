@@ -1,0 +1,45 @@
+/* body{
+   background-image: url(images/pic7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  font-family: "Times New Roman", Times, serif, Verdana;
+} */
+/* .navbar-dark {
+    background-color: #512DA8;
+} */
+
+/* .nav-link1 {
+    display: block;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+  } */
+
+   .btn1{
+    padding: 14px 35px;
+    display: block;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    float: right;
+     
+  } 
+
+  .navbar-nav{
+    padding: 1.5rem;
+  }
+
+  .navbar-brand{
+    margin-left: 1rem;
+  }
+
+  
+
+  footer{
+    background-color: #D1C4E9;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+}
+  
