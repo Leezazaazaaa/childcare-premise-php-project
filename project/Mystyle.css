@@ -1,45 +1,178 @@
-/* body{
-   background-image: url(images/pic7.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; 
-  font-family: "Times New Roman", Times, serif, Verdana;
-} */
-/* .navbar-dark {
-    background-color: #512DA8;
-} */
 
-/* .nav-link1 {
-    display: block;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    padding: 14px 25px;
-    text-decoration: none;
-  } */
+@import url(https://fonts.googleapis.com/css?family=Cherry+Swash);
 
-   .btn1{
-    padding: 14px 35px;
-    display: block;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    float: right;
-     
-  } 
+    .nav-link1 {
+      display: block;
+      font-weight: bold;
+      color:black;
+      text-align: center;
+      padding: 14px 25px;
+      text-decoration: none;
+      font-family: Verdana;
+    }
 
-  .navbar-nav{
-    padding: 1.5rem;
-  }
+    .nav-link1:hover {
+      background-color: yellow;
+      color: black;
+      list-style-type:none;
+      text-decoration: none;
+}
 
-  .navbar-brand{
-    margin-left: 1rem;
-  }
 
+    @media screen and (min-width: 350px) {
+      .nav-link1 {
+      display: block;
+      color:aliceblue;
+      text-decoration: none;
+      float: left;
+      font-family: Verdana;
+      font-size: larger;
+      
+
+    }
+    }
   
 
-  footer{
-    background-color: #D1C4E9;
-    margin:0px auto;
-    padding: 20px 0px 20px 0px;
+    .btn1 {
+      padding: 14px 35px;
+      display: block;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 480px) {
+      .btn1 {
+      display: block;
+      font-weight: bold;
+      float: left;
+    }
+    }
+
+    .navbar-nav {
+      padding: 1.5rem;
+    }
+
+    .navbar-brand {
+      margin-left: 1rem;
+    }
+
+    .navbar-dark{
+      background-color:#512DA8;
+    }
+
+    .navbar {
+      margin-bottom: 30rem;
+    }
+
+
+    
+
+
+#container1{
+ margin-top: 5rem;
+} 
+
+
+
+body{
+background-image: url(images/pic7.jpg);
+background-repeat:no-repeat;
+background-size:cover; 
+font-family: "Times New Roman", Times, serif, Verdana;
 }
+
+/* .carousel-inner{
+border-radius: 1rem;
+} */
+
+#basic-information{
+background-color:antiquewhite;
+font-family:arial;
+font-size:1.3rem;
+line-height:1.8rem;
+padding:2rem;
+text-align:justify;
+margin-bottom: 1rem;
+text-decoration: wavy;
+}
+
+#basic-information1{
+
+font-family:arial;
+font-size:1.1rem;
+line-height:1.4rem;
+padding:1rem;
+text-align:justify;
+margin-bottom: 1rem;
+text-decoration: wavy;
+}
+
+
+
+#basic-information-title{
+background-color:burlywood;
+padding: 1rem;
+font-weight: bold;
+text-decoration: wavy;
+}
+
+#basic-information-title1{
+background-color:aqua;
+padding: 1rem;
+font-weight: bold;
+font-family: Verdana;
+text-decoration: wavy;
+}
+
+.carousel-inner{
+border-radius: .5rem;
+}
+
+#last-info{
+margin-bottom: 16rem;
+}
+
+#buttons{
+background-color: orangered;
+color: white;
+text-decoration: solid;
+font-weight: bold;
+}
+
+
+
+#firstCard{
+padding: 3rem;
+background-image: url(images/pic9.jpg);
+color: red;
+text-decoration-color: #512DA8;
+font-weight: bold;
+font-family: 'Cherry Swash';
+font-size: 20rem;
+}
+
+#card-title1{
+font-size:3rem;
+color: blue;
+font-weight: bold;
+}
+
+
+
+
+
+
+footer{
+background-color: #512DA8;
+margin:0px auto;
+padding: 20px 0px 20px 0px;
+font-weight: bold;
+color: white;
+text-decoration: none;
+}
+
+
+
+
   
