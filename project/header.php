@@ -76,7 +76,7 @@
             <a class="nav-link1" href="index.php">Home </a>
           </li>
           <li class="nav-item1">
-            <a class="nav-link1" href="#">Registration </a>
+            <a class="nav-link1" href="registration.php">Registration </a>
           </li>
 
           <li class="nav-item1">
@@ -99,10 +99,10 @@
             if(isset($_SESSION['Admin']))
             {
               ?>
-          
+
 
         <div class="btn2">
-        
+
         <li class="nav-item1 btn btn-warning">
             <a class="nav-link-Admin" href="index_edit.php">Admin Acoount</a>
           </li>
@@ -110,9 +110,9 @@
           <li class="nav-item1 btn btn-warning">
             <a class="nav-link-Admin" href="logout.php">Log Out</a>
           </li>
-        
-         
-        </div>    
+
+
+        </div>
 
         <?php
             }
@@ -147,7 +147,7 @@
 
         <div class="btn1">
           <button type="button" id="btn" class="btn btn-danger">Sign Up</button>
-          
+
           <a href="login.php" type="button" id="btn" class="btn btn-warning">Log In</a>
         </div>
           <?php
@@ -165,7 +165,7 @@
 
 
 
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>

@@ -27,11 +27,11 @@
       float: left;
       font-family: Verdana;
       font-size: larger;
-      
+
 
     }
     }
-  
+
 
     .btn1 {
       padding: 14px 35px;
@@ -66,19 +66,22 @@
     }
 
 
-    
+
 
 
 #container1{
  margin-top: 5rem;
-} 
+}
 
+#container2{
+  margin-top: 5rem;
+}
 
 
 body{
 background-image: url(images/pic7.jpg);
 background-repeat:no-repeat;
-background-size:cover; 
+background-size:cover;
 font-family: "Times New Roman", Times, serif, Verdana;
 }
 
@@ -174,4 +177,3 @@ text-decoration: none;
 
 
 /* ***************************************************       left bar css                 ******************************************* */
-
