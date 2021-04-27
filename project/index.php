@@ -1,10 +1,10 @@
 <?php
-
-include "header.html";
+session_start();
 ?>
 <!doctype html>
 <html lang="en">
   <head>
+  <script src="script.js"></script>
   <link rel="icon" type="image/png" href="images/logo_transparent.png"/>
   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -21,6 +21,10 @@ include "header.html";
   </head>
   <body>
 
+        <?php
+         
+          include "header.php";
+      ?>
   <header>
     <div id="container1" class="container py-5">
       <div class="">
