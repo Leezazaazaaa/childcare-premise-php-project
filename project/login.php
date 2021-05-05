@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 					$_SESSION['Role'] == $row["role"];
                 
                         //redirecting to home page after 5 seconds..
-					header("refresh:5;url=temp/adminDashboard.php");
+					header("refresh:5;url=AdminPages/adminDashboard.php");
 					$text = "<h4>Welcome {$_SESSION['Admin']}</h4>";
 					$text1 = "<h4>welcome to kiddies,</h4>";
 					$text2 = "<h5>you'll be redirected to <strong>admin panel</strong> in 5 seconds...</h5>";
