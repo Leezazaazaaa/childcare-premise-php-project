@@ -1,17 +1,19 @@
 
 <?php
-
+// starting the session 
 session_start();
- if ((isset($_SESSION['Admin'])) || (isset($_SESSION['User']))) { // if user logged in, give access to resources...
+ // if user/admin logged in then print welcome message and redirect to the home page 
+ if ((isset($_SESSION['Admin'])) || (isset($_SESSION['User']))) {
     header( "refresh:5;url=index.php" );
     
+    $text0 = "<h2 style='color:red;'>Logged Out Successfully,</h2>";
     $text1 = "<h4>Thank you for visiting kiddies,</h4>";
     $text2 = "<h5>you'll be redirected to home page in 5 seconds...</h5>";
  } else {
- echo "Please login again!"; // do something meaningful here
+ echo "Please login again!"; 
     
  }
-
+// if logged out then destroy the session
 if ((isset($_SESSION['Admin'])) ||  (isset($_SESSION['User']))) {
     session_unset();
     session_destroy();
@@ -79,12 +81,14 @@ if ((isset($_SESSION['Admin'])) ||  (isset($_SESSION['User']))) {
                        
 
                     <?php
+                    // if logged out successfully, print the confirmation message
                     if(!isset($_SESSION['Admin']))
                     {
-                        echo "<div class='welcome'>$text1";
+                        echo "<div class='welcome'>$text0";
+                        echo  "$text1";
                         echo  "$text2</div>";
                     }
-                    else
+                    else 
                     {
                         ?>
                             <div class="card login-form">
@@ -108,7 +112,7 @@ if ((isset($_SESSION['Admin'])) ||  (isset($_SESSION['User']))) {
                                             <button type="submit" name="btnLogin" class="btn btn-primary btn-block">Sign in</button>
 
                                             <div class="sign-up">
-                                                Don't have an account? <a href="#">Create One</a>
+                                                Don't have an account? <a href="registration.php">Create One</a>
                                             </div>
 
                                         </form>
@@ -128,8 +132,9 @@ if ((isset($_SESSION['Admin'])) ||  (isset($_SESSION['User']))) {
 
 
 
+     
             <?php
-              include "footer.html"
+              include "footer.html" // inclding the footer
             ?>
 
     

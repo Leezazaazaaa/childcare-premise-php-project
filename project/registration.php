@@ -1,5 +1,5 @@
 <?php
-include "header.html";
+include "header.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,11 +14,23 @@ include "header.html";
 
     <link rel="stylesheet" href="Mystyle.css">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    #container2{
+      background-color:gainsboro;
+      margin-top: 10rem;
+      margin-bottom: 5rem;
+      padding: 2rem;
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+ 
   </head>
   <body>
-    <div id="container2" class="container py-5">
-      <form action ="registration.php" method="post">
+    <div id="container2" class="container py-5 col-12 col-md-6">
+      <form action ="registration.php" method="post" >
         <h1> Child Registration Form </h1>
         <input type ="radio" name = "care" id="type1" required="input" value="type1" onclick="func();"/>
         <label for ="kid1"> Baby </label>
