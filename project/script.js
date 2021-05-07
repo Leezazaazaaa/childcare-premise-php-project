@@ -1,4 +1,5 @@
-function func(){
+function func(event){
+    // debugger;
     var cb = document.getElementById("type1");
       var text = document.getElementById("fullDay1");
       var text2 = document.getElementById("fullday1");
@@ -32,15 +33,44 @@ function func(){
       var text24 = document.getElementById("time7");
 
     if(document.getElementById("type1").checked){
+      document.querySelectorAll('.reg-option').forEach(function(el){
+        el.style.display = 'none';
+      });
+
+      document.getElementById("dayCareInfo1").style.display = "block";
+      // document.getElementById("reg-option").style.display = "block";
+
           text.style.display = "block";
           text2.style.display = "block";
           text3.style.display = "block";
           text4.style.display = "block";
           text5.style.display = "block";
           text6.style.display = "block";
+          window.onclick = e => {
+            var id = e.target.id + "-option";
+            if(e.target.className == "day-field"){
+              // if(document.getElementsByClassName("day-field").checked){
+                document.querySelectorAll('.day-field').forEach(el => {
+                  el.style.display = 'none';
+                });
+
+                // document.querySelectorAll('.day-field').forEach((function(el) {
+                //   el.style.display = 'none';
+                // });
+
+                document.getElementById(id).style.display = "block";
+              // }
+            }
+            // console.log(e.target);  // to get the element
+            // console.log(e.target.tagName);  // to get the element tag name alone
+          }
 
     }
     else if (document.getElementById("type2").checked) {
+      document.querySelectorAll('.reg-option').forEach(function(el){
+        el.style.display = 'none';
+      });
+      document.getElementById("dayCareInfo2").style.display = "block";
         text7.style.display = "block";
         text8.style.display = "block";
         text9.style.display = "block";
@@ -51,6 +81,10 @@ function func(){
     }
 
     else if (document.getElementById("type3").checked) {
+      document.querySelectorAll('.reg-option').forEach(function(el){
+        el.style.display = 'none';
+      });
+      document.getElementById("dayCareInfo3").style.display = "block";
       text13.style.display = "block";
       text14.style.display = "block";
       text15.style.display = "block";
@@ -61,6 +95,10 @@ function func(){
     }
 
     else if (document.getElementById("type4").checked) {
+      document.querySelectorAll('.reg-option').forEach(function(el){
+        el.style.display = 'none';
+      });
+      document.getElementById("dayCareInfo4").style.display = "block";
       text19.style.display = "block";
       text20.style.display = "block";
       text21.style.display = "block";
@@ -96,4 +134,6 @@ function func(){
           text23.style.display = "none";
           text24.style.display = "none";
     }
+
+
 }
