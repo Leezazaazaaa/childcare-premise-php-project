@@ -126,10 +126,10 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 
 
  
-<div class="contact col-12 col-md-6">
+<div class="contact col-12 col-md-6 md-center">
 
 
-<div class="container-contact">
+<div id="container2" class="container-contact">
 
  <?php
     // priting errors
