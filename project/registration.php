@@ -1,5 +1,5 @@
 <?php
-include "header.html";
+include "header.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -9,22 +9,11 @@ include "header.html";
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<<<<<<< HEAD
   <!-- <!- Bootstrap CSS -->
-=======
-  <script src="script.js">
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-
-  <!-- <!- Bootstrap CSS --> -->
->>>>>>> 8d04a3c7a5c21afaf508261ba08f6371ed97ce94
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <link rel="stylesheet" href="Mystyle.css">
     <meta charset="utf-8">
-<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
@@ -33,13 +22,6 @@ include "header.html";
   <body>
     <div id="container2" class="container py-5 col-12 col-md-6">
     <form action ="registration.php" method="post">
-=======
-    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-  </head>
-  <body>
-    <div id="container2" class="container py-5">
-      <form action ="registration.php" method="post">
->>>>>>> 8d04a3c7a5c21afaf508261ba08f6371ed97ce94
         <h1> Child Registration Form </h1>
         <input type ="radio" name = "care" id="type1" required="input" value="type1" onclick="func();" />
         <label for ="kid1"> Baby </label>
@@ -160,7 +142,6 @@ if(($_POST['care'] == "type1") && ($_POST['catagory'] == "fullDay1")){
 //   $time = $_POST['time7'] ;
 // }elseif($_POST['care'] == "type4" && $_POST['catagory'] == "halfDay4"){
 //   $time = $_POST['time8'] ;
-<<<<<<< HEAD
 }else{
 $time = $_POST['time2'] ;
 }
@@ -197,44 +178,6 @@ if (empty($_POST['password'])) { //checking if the password is empty
   $errors[] = "Password is required";
 }
 
-=======
-}else{
-$time = $_POST['time2'] ;
-}
-
-echo "File added successfully";
-$user = $_POST['userName'];
-
-if (empty($_POST['care'] == "type1")) { //checking if the type is empty
-  $errors[] = "Type of baby is required";
-}
-
-if (empty($_POST['catagory'] == "fullDay1")) { //checking if the type is empty
-  $errors[] = "Catagory full time or part time is required";
-}
-
-if (empty($time)) { //checking if the time is empty
-  $errors[] = "How many days in a week you want to register your child is required";
-}
-
-if (empty( $_POST['userName'])) { //checking if the user name is empty
-  $errors[] = "Username is required";
-}
-
-if (empty( $_POST['email'])) { //checking if the email is empty
-  $errors[] = "Username is required";
-}else{
-  $email = trim($_POST['email']);
-  if (!preg_match('/^[a-zA-Z0-9]{17}$/', $email)) { //cheking if the email contains @ and .
-    $errors[] = "Email must have @ and . in it";
-  }
-}
-
-if (empty($_POST['password'])) { //checking if the password is empty
-  $errors[] = "Password is required";
-}
-
->>>>>>> 8d04a3c7a5c21afaf508261ba08f6371ed97ce94
 if($empty($errors)){
 
 }
@@ -246,5 +189,10 @@ if($empty($errors)){
 <?php
  include "footer.html"
 ?>
+<script src="script.js">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 </body>
 </html>
