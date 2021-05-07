@@ -13,6 +13,16 @@ font-family: "Times New Roman", Times, serif, Verdana;
   margin-top: 0rem;
 }
 
+/* registration form styling */
+#container2{
+  background-color:gainsboro;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  padding: 2rem;
+  color: black;
+  font-weight: bold;
+}
+
 
 #basic-information{
 background-color:antiquewhite;
@@ -178,6 +188,24 @@ input[type=submit]:hover {
   margin-left: 3rem;
   font-weight: bold;
   
+}
+
+/* testimonials styling */
+
+.testi{
+  background-color:beige;
+  width: 60%;
+  margin: auto;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+@media only screen and (max-width: 700px) {
+   .testi{
+       width: 90%;
+       margin: auto;
+   }
+   
 }
 
 

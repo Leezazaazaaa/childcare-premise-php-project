@@ -58,3 +58,34 @@ phone_no VARCHAR(50) NOT NULL,
 Message VARCHAR(500) NOT NULL,
 PRIMARY KEY (message_id)
 );
+
+--service_Name ENUM('Choose a service', 'School Transportation', 'Trained Supervision', 'Social Skill Promotion', 'play time', 'Lunch Service', 'Evening sleeping bed'),
+CREATE TABLE testimonial(
+testimonial_id INT(100) NOT NULL AUTO_INCREMENT,
+service_Name VARCHAR(35) NOT NULL,
+parent_name VARCHAR(50) NOT NULL,
+testi_date Date not null,
+comment VARCHAR(500) NOT NULL,
+PRIMARY KEY (testimonial_id)
+);
+
+CREATE TABLE service(
+service_id INT(12) NOT NULL AUTO_INCREMENT,
+image VARCHAR(50) NOT NULL,
+name VARCHAR(50) NOT NULL,
+description VARCHAR(1000) NOT NULL,
+link VARCHAR(500) NOT NULL,
+PRIMARY KEY (service_id)
+);
+
+
+INSERT INTO service VALUES (1,'', 'School Transportation', '', '');
+INSERT INTO service VALUES (2,'', 'Trained Supervision', '', '');
+INSERT INTO service VALUES (3,'', 'School Transportation', '', '');
+INSERT INTO service VALUES (4,'', 'Social Skill Promotion', '', '');
+INSERT INTO service VALUES (5,'', 'play time', '', '');
+INSERT INTO service VALUES (6,'', 'Lunch Service', '', '');
+INSERT INTO service VALUES (7,'', 'Evening sleeping bed', '', '');
+
+
+

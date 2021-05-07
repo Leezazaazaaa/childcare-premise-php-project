@@ -352,9 +352,9 @@ toggle between hiding and showing the dropdown content */
             <ul class="menu">
   
                 <li><a href="index.php">Home</a></li>
-                <li> <a class="nav-link1" href=" registration.php">Registration </a></li>
+                <li> <a class="nav-link1" href="registration.php">Registration </a></li>
                 <li> <a class="nav-link1" href="#">Services</a></li>
-                <li> <a class="nav-link1" href="#">Testimonials</a></li>
+                <li> <a class="nav-link1" href="testimonial.php">Testimonials</a></li>
                 <li> <a class="nav-link1" href="contactUs.php">Contact</a></li>
                 
  
@@ -399,6 +399,25 @@ toggle between hiding and showing the dropdown content */
             elseif(isset($_SESSION['User']))
             {
           ?>
+
+              <div class="btn2">
+                   <li>
+
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-22" class="toggle1"></label>
+                    <a class="btn btn-danger" href="#">User Acoount</a>
+                    
+                    <ul>
+                        
+                        
+                        <li><a href="testimonial_add.php">Add Testimonial</a></li>
+                        <li><a href="day_details.php">Day Details</a></li>
+                        <li><a class="nav-link-Admin" href="logout.php">Log Out</a></li>
+                  
+                    </ul>
+                    </li>
+
+               </div>
 
          
               <!-- Example single danger button 

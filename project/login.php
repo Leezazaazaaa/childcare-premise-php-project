@@ -125,7 +125,10 @@ include "header.php";
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Password</label>
                                                 
-                                                <input type="password" name="password" class="form-control form-control-sm" id="exampleInputPassword1">
+                                                <input type="password" name="password" class="form-control form-control-sm" id="myInput">
+                                                <br>
+                                                <input type="checkbox" onclick="FunctionPass()"> Show Password
+                                                
                                             </div>
                                             
                                             <?php

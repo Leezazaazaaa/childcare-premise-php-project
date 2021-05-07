@@ -17,6 +17,7 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
+    <!-- <link rel="stylesheet" href="../Mystyle.css"> -->
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -92,7 +93,7 @@
             <hr class="sidebar-divider">
            
             <li class="nav-item">
-                <a class="nav-link" href="../index.php">
+                <a class="nav-link" href="testimonial_manage.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span> Mange Testimonials</span></a>
             </li>
