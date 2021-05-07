@@ -1,5 +1,5 @@
 <?php
-include "header.html";
+include "header.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -190,7 +190,7 @@ if($empty($errors)){
 
 
 <?php
- include "footer.html"
+ include "footer.php"
 ?>
 </body>
 </html>
