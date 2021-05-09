@@ -79,6 +79,24 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         $phoneNumber = htmlentities($phone);
         $messages = htmlentities($Mymessage);
 
+            $to = 'thumamahahmed50@gmail.com,' .$Email;
+            $subject = 'Confirmation Email';
+            $message = 'Hi ' .$Name. ', '  . "\r\n" . 'Thank you for getting in touch. We will be with you very soon. Due to very high volume of emails it may take some 
+            time before we reach out to you. For the mean time you can navigate through out site 
+            https://knuth.griffith.ie/~s000000/childcare-premise-php-project and get some interesting information.
+            '  . "\r\n" . '
+            Regards,
+            Kiddies Cove Head.
+            '  . "\r\n" . '
+            YOUR MESSAGE BELOW :
+            ' . $messages . '
+            ';
+            $message = wordwrap($message, 70);
+            $headers = 'From: KiddiesCove@gmail.com' . "\r\n" . 'Reply-To: KiddiesCove@gmail.com' .
+            "\r\n". 'X-Mailer: PHP/' . phpversion();
+            // send
+            mail($to, $subject, $message, $headers);
+
         // adding message to the database
 
         // $query = "INSERT INTO contact_us(name, email, phone, message) VALUES('$Name', '$Email', ' $phoneNumber', '$messages')";
