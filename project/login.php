@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $msg[]= " Enter Username";
 	} else {
 		$username = $_POST['username'];
-		if (filter_var($_POST['username'], FILTER_VALIDATE_EMAIL)) {
+		if (filter_var($_POST['username'])) {
 			$username = $_POST['username'];
 		} else {
 			$error= true;
@@ -34,23 +34,32 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$password = validating_input($_POST['password']);
 	}
 
+
 	if (isset($_POST["btnLogin"])) {
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 
+        
+
             // retrieving user data
 		$query = "SELECT * FROM user WHERE username = '$username' AND password='$password'";
+        $query2 = "SELECT * FROM child WHERE username = '$username' AND password='$password'";
             // executing query
+           
 		$result = mysqli_query($connection, $query);
+        $result2 = mysqli_query($connection, $query2);
 
-		if (mysqli_num_rows($result) > 0) {
-			while ($row = mysqli_fetch_assoc($result)) {
+		if ((mysqli_num_rows($result) > 0) || (mysqli_num_rows($result2) > 0)){
+			while (($row = mysqli_fetch_assoc($result)) || ($row = mysqli_fetch_assoc($result2))){
                     // if user logs in 
 				if ($row["role"] == "user") //|| ($row["role"] == "admin"))
 				{
                         //Creating session variables to hold relevant information about who is logged in
 					$_SESSION['User'] = $row["username"];
 					$_SESSION['Role'] == $row["role"];
+
+
+                        
                         
                         // redirecting to home page after 5 seconds..
 					header("refresh:5;url=index.php");
@@ -120,7 +129,7 @@ include "header.php";
                                             <!-- to error: add class "has-danger" -->
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" name="username" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <input type="text" name="username" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Password</label>
