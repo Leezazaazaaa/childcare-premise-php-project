@@ -67,7 +67,7 @@ service_Name VARCHAR(35) NOT NULL,
 parent_name VARCHAR(50) NOT NULL,
 testi_date Date not null,
 comment VARCHAR(500) NOT NULL,
-display varchar(4) DEFAULT 'no',
+display varchar(4) DEFAULT 'SHOW',
 PRIMARY KEY (testimonial_id)
 );
 
@@ -100,6 +100,10 @@ password VARCHAR(100) NOT NULL
 );
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d26e03770012984d34b349b0dbda6f7bb3c880fb
 CREATE TABLE day(
 ID INT PRIMARY KEY AUTO_INCREMENT,
 date Date NOT NULL,
@@ -110,6 +114,11 @@ lunch VARCHAR(100) NOT NULL,
 activities varchar(100) NOT NULL
 );
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> f6c8f239ebc48a4a75fb7e7bd3b6ca8d2dd1b7a9
+>>>>>>> d26e03770012984d34b349b0dbda6f7bb3c880fb
 

@@ -131,11 +131,13 @@ $count="";
 
                     <P id="basic-information1" class="card-text">
                         <ul class="list-unstyled">
-                              <li><a href="#">Service 1</a></li>
-                              <li><a href="#">Service 2</a></li>
-                              <li><a href="#">Service 3</a></li>
-                              <li><a href="#">Service 4</a></li>
-                              <li><a href="#">Service 5</a></li>
+                              <li>School transportation</a></li>
+                              <li>Trained Supervision</a></li>
+                              <li>Social Skill Promotion</a></li>
+                              <li>Know the daily activities</a></li>
+                              <li>Canteen</a></li>
+                              <li>Evening Sleeping Bed</a></li>
+                              <li><a href="services.php">Get more details!</a></li>
                         </ul>
                     </P>
 

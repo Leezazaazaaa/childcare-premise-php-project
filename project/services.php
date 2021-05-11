@@ -87,7 +87,7 @@
                 <div class="card" style="width: 20rem;">
                     <img class="card-img-top" src="images/childday.png" style="height: 257px;" alt="Child's day">
                     <div class="card-body">
-                        <h5 class="card-title">Playtime</h5>
+                        <h5 class="card-title">Daily activities</h5>
                         <p class="card-text">Get to know your children's day, what's he/she gonna eat,
                             what are the activities planned for today</p>
                         <a href="day_details.php" class="btn btn-primary">Know what your kid did at school</a>
