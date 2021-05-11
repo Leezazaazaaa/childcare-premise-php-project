@@ -67,7 +67,7 @@ service_Name VARCHAR(35) NOT NULL,
 parent_name VARCHAR(50) NOT NULL,
 testi_date Date not null,
 comment VARCHAR(500) NOT NULL,
-display varchar(4) DEFAULT 'no',
+display varchar(4) DEFAULT 'SHOW',
 PRIMARY KEY (testimonial_id)
 );
 
@@ -98,6 +98,17 @@ username VARCHAR(100) NOT NULL,
 Email VARCHAR(100) NOT NULL UNIQUE,
 role varchar(4) DEFAULT 'user',
 password VARCHAR(100) NOT NULL
+);
+
+
+CREATE TABLE day(
+ID INT PRIMARY KEY AUTO_INCREMENT,
+date Date NOT NULL,
+name VARCHAR(100) NOT NULL,
+temperature INT (100) NOT NULL,
+breakfast VARCHAR(100) NOT NULL,
+lunch VARCHAR(100) NOT NULL,
+activities varchar(100) NOT NULL
 );
 
 
