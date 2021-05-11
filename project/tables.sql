@@ -9,6 +9,7 @@ PRIMARY KEY (id)
 );
 
 INSERT INTO user (username, password, role) VALUES ('user@gmail.com', 'user@123', 'user');
+INSERT INTO user (username, password, role) VALUES ('admin@gmail.com', 'admin@123', 'admin');
 
 DROP TABLE IF EXISTS page;
 
@@ -66,6 +67,7 @@ service_Name VARCHAR(35) NOT NULL,
 parent_name VARCHAR(50) NOT NULL,
 testi_date Date not null,
 comment VARCHAR(500) NOT NULL,
+display varchar(4) DEFAULT 'no',
 PRIMARY KEY (testimonial_id)
 );
 
@@ -87,5 +89,15 @@ INSERT INTO service VALUES (5,'', 'play time', '', '');
 INSERT INTO service VALUES (6,'', 'Lunch Service', '', '');
 INSERT INTO service VALUES (7,'', 'Evening sleeping bed', '', '');
 
+CREATE TABLE child(
+ID INT PRIMARY KEY AUTO_INCREMENT,
+Category VARCHAR(100) NOT NULL,
+Day VARCHAR(100) NOT NULL,
+Fee INT (50) NOT NULL,
+username VARCHAR(100) NOT NULL,
+Email VARCHAR(100) NOT NULL UNIQUE,
+role varchar(4) DEFAULT 'user',
+password VARCHAR(100) NOT NULL
+);
 
 
