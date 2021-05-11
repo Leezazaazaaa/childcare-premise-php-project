@@ -1,12 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-<?php
-    session_start();
-    if(!isset($_SESSION['User'])){
-        header("Location: login.php");
-}
-?>
 <head>
     <link rel="icon" type="image/png" href="images/logo_transparent.png" />
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -43,17 +37,16 @@
         </header>
 
 
-        <div class="container" style="background-color: red;">
+        <div class="container" >
             <div class="col-xs-12 col-sm-7 col-md-8 pull-right">
                 <div class="content">
-                    <h1 class="page-title"> Bus timetable</h1>
-                    <hr> <img width="600" height="200" src="images/educator.jfif" class="img-responsive img-rounded wp-post-image" alt="">
-                    <h2>(6 months to 1 year)</h2>
-                    <h3>We understand that choosing a childcare provider can be an emotional and at times difficult step for new parents.</h3>
-                    <p>At Giraffe we work together with parents over a settling in period of a few days to ensure that your child is happy and comfortable in their new surroundings. During this period, as your child settles in and establishes a bond with their key carer and gains confidence, we learn about your child’s daily routine, their mealtimes, sleeping patterns and all the other little things special to your child. In our experience, it takes about 3-5 days to settle your child but every child is different so we always work with you to make this as smooth as possible for both you and your child.</p>
-                    <p>Our open door policy means you’re always welcome to drop in and spend some time with your child. We’ll give you daily feedback on your child’s day and we keep written diaries that keep track your child’s day and detail any other information that’s helpful. Our baby rooms are cosy and intimate, with a 3:1 ratio and extra lunchtime cover to help us out at busy mealtimes! We will support your child with weaning and will introduce different tastes and textures and our on-site cook will be happy to chat with you about your child’s dietary requirements.</p>
-                    <p>In our baby rooms, we are developing your child’s sense of self and there is constant interaction between the carers and the children to encourage their natural curiosity. The environment is safe, stimulating and nurturing to foster your child’s love of learning as they discover the world around them. Our black and white areas are designed to create a stimulating yet comforting environment for babies which will captivate and hold your child’s attention, encouraging visual development as well as physical activity.</p>
-                    <p>Babies also enjoy tummy time, tickle time, garden time, music and heuristic play and if your child has an older brother or sister in our crèche, they will have family time together every day!</p>
+                    <h1 class="page-title"> The importance of having school transportation</h1>
+                    <hr> <img  src="images/bus.jpg" class="img-responsive img-rounded wp-post-image" alt="">
+                    <p>Parents when choosing a school for their kids look for facilities that the school is offering. Parents also feel relaxed that they don’t have to bother about daily dropping and to pick their kids</p>
+                    <p>One of the most important benefits of school buses is that they arrive on time. Every morning, you know when the bus will be at the stop to pick your kid. So accordingly, you can manage your timing and ensure that your little one reaches school on time. </p>
+                    <p>From a young age, kids get to learn a lot of new things. And when they travel in school buses, they not just make new friends, but they learn sharing, companionship and how to make new friends.These things will help them for years to come. For school going kids’, school bus is usually the best place where they get to meet new kids and make friends.</p>
+                    <p>When kids use school buses, they learn to take care of their personal belongings, like a school bag, water bottle, and lunch box. This helps them in their overall development and well-being and makes them a responsible and independent individual.</p>
+                    <p>We at kiddies cove offers you the service of the school bus!</p>
                     <p>For more information, please call us on <strong>(01) 2450935.</strong></p>
                 </div>
             </div>
