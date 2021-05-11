@@ -101,6 +101,7 @@ password VARCHAR(100) NOT NULL
 );
 
 
+<<<<<<< HEAD
 CREATE TABLE day(
 ID INT PRIMARY KEY AUTO_INCREMENT,
 date Date NOT NULL,
@@ -111,4 +112,6 @@ lunch VARCHAR(100) NOT NULL,
 activities varchar(100) NOT NULL
 );
 
+=======
+>>>>>>> f6c8f239ebc48a4a75fb7e7bd3b6ca8d2dd1b7a9
 
