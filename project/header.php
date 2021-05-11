@@ -353,7 +353,7 @@ toggle between hiding and showing the dropdown content */
   
                 <li><a href="index.php">Home</a></li>
                 <li> <a class="nav-link1" href="registration.php">Registration </a></li>
-                <li> <a class="nav-link1" href="#">Services</a></li>
+                <li> <a class="nav-link1" href="services.php">Services</a></li>
                 <li> <a class="nav-link1" href="testimonial.php">Testimonials</a></li>
                 <li> <a class="nav-link1" href="contactUs.php">Contact</a></li>
                 

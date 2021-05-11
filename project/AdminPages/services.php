@@ -46,7 +46,7 @@
                         <p class="card-text">Area transportation is a must for any daycare center.
                             This includes before and after school dropoffs and pickups.
                             This is a service that will save you both time and money.</p>
-                        <a href="bus.php" class="btn btn-primary">Check your kid's bus time</a>
+                        <a href="bus.php" class="btn btn-primary">Know more about it</a>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                         <h5 class="card-title">Playtime</h5>
                         <p class="card-text">Get to know your children's day, what's he/she gonna eat,
                             what are the activities planned for today</p>
-                        <a href="day_details.php" class="btn btn-primary">Know today's activities</a>
+                        <a href="day_details.php" class="btn btn-primary">Know what your kid did at school</a>
                     </div>
                 </div>
             </div>
@@ -100,8 +100,8 @@
                     <img class="card-img-top" src="images/lunch.jpg" style="height: 305px;" alt="Children eating">
                     <div class="card-body">
                         <h5 class="card-title">Lunch Service</h5>
-                        <p class="card-text">Know the weekly lunch menu</p>
-                        <a href="lunch.php" class="btn btn-primary">Lunch menu</a>
+                        <p class="card-text">Children will eat at happily at the center</p>
+                        <a href="lunch.php" class="btn btn-primary">Know more about it</a>
                     </div>
                 </div>
             </div>
