@@ -32,7 +32,7 @@ session_start();
 
 <body id="page-top">
 
-    
+
     <?php
     include "sidebar.php";
     ?>
@@ -47,22 +47,22 @@ session_start();
 
                     <div class="row">
 
-                        
 
-                        
+
+
 
                         <!-- Tasks Card Example -->
-                        
+
 
                         <!-- Pending Requests Card Example -->
-                       
+
                     </div>
 
                     <div class="row">
 
                         <div class="col-lg-6">
 
-                            
+
 
                             <!-- Basic Card Example -->
                             <div class="card shadow mb-4">
@@ -71,7 +71,7 @@ session_start();
                                 </div>
                                 <div class="card-body">
                                 <img src="img/pic10.jpg" class="card-img-top" alt="pic5">
-                                   
+
                                 </div>
                                 <a href="../index.php" id="buttons" class="btn btn-lg">Home Page</a>
                             </div>
@@ -83,7 +83,7 @@ session_start();
                                 </div>
                                 <div class="card-body">
                                 <img src="img/pic10.jpg" class="card-img-top" alt="pic5">
-                                   
+
                                 </div>
                                 <a href="index-edit.php" id="buttons" class="btn btn-lg">Edit Home Page</a>
                             </div>
@@ -95,9 +95,9 @@ session_start();
                                 </div>
                                 <div class="card-body">
                                 <img src="img/pic10.jpg" class="card-img-top" alt="pic5">
-                                   
+
                                 </div>
-                                <a href="" id="buttons" class="btn btn-lg">Edit Registration Page</a>
+                                <a href="registration_edit" id="buttons" class="btn btn-lg">Edit Registration Page</a>
                             </div>
 
 
@@ -105,7 +105,7 @@ session_start();
 
                         <div class="col-lg-6">
 
-                           
+
                             <!-- Basic Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
@@ -113,7 +113,7 @@ session_start();
                                 </div>
                                 <div class="card-body">
                                 <img src="img/pic10.jpg" class="card-img-top" alt="pic5">
-                                   
+
                                 </div>
                                 <a href="index-edit.php" id="buttons" class="btn btn-lg">Edit Day Details</a>
                             </div>
@@ -125,7 +125,7 @@ session_start();
                                 </div>
                                 <div class="card-body">
                                 <img src="img/pic10.jpg" class="card-img-top" alt="pic5">
-                                   
+
                                 </div>
                                 <a href="" id="buttons" class="btn btn-lg">Mange Testimonials</a>
                             </div>
@@ -137,11 +137,11 @@ session_start();
                                 </div>
                                 <div class="card-body">
                                 <img src="img/pic10.jpg" class="card-img-top" alt="pic5">
-                                    
+
                                 </div>
                                 <a href="contact_us_manage.php" id="buttons" class="btn btn-lg">Manage Contact Page</a>
                             </div>
-                            
+
 
                         </div>
 
