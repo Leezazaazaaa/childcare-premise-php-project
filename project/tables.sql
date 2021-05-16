@@ -8,6 +8,15 @@ role VARCHAR(50) NOT NULL,
 PRIMARY KEY (id)
 );
 
+CREATE TABLE `User` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `role` varchar(10) NOT NULL DEFAULT 'member',
+  PRIMARY KEY (`user_id`)
+)
+
+
 INSERT INTO user (username, password, role) VALUES ('user@gmail.com', 'user@123', 'user');
 INSERT INTO user (username, password, role) VALUES ('admin@gmail.com', 'admin@123', 'admin');
 
@@ -74,51 +83,60 @@ PRIMARY KEY (testimonial_id)
 CREATE TABLE service(
 service_id INT(12) NOT NULL AUTO_INCREMENT,
 image VARCHAR(100) NOT NULL,
-name VARCHAR(50) NOT NULL,
+name VARCHAR(100) NOT NULL,
 description VARCHAR(1000) NOT NULL,
 link VARCHAR(500) NOT NULL,
 PRIMARY KEY (service_id)
 );
 
 
-INSERT INTO service VALUES (1,'https://knuth.griffith.ie/~s3007693/childcare-premise-php-project/project/images/bus.jpg', 'School Transportation', 'Area transportation is a must for any daycare center. This includes before and after school dropoffs and pickups. This is a service that will save you both time and money.', 'https://knuth.griffith.ie/~s3007693/childcare-premise-php-project/project/bus.php');
-INSERT INTO service VALUES (2,'https://knuth.griffith.ie/~s3007693/childcare-premise-php-project/project/images/educator.jfif', 'Trained Supervision', 'No matter how old your children are it is integral that they are left in the hands of qualified adults who will be able to care for them in all sorts of situations. At Kiddies Cove we have a selected team that is first aid certified and MAT certified', 'https://knuth.griffith.ie/~s3007693/childcare-premise-php-project/project/supervision.php');
-INSERT INTO service VALUES (3,'https://knuth.griffith.ie/~s3007693/childcare-premise-php-project/project/images/peer.jpg', 'Social Skill Promotion', "One of the most important ways that children learn is through interaction with each other. Our daycare center encourage children to play, grow and learn togheter. You will soon notice yout child's social behaviour growing when they are placed in a friendly environment.", 'https://knuth.griffith.ie/~s3007693/childcare-premise-php-project/project/skill.php');
-INSERT INTO service VALUES (4,'https://knuth.griffith.ie/~s3007693/childcare-premise-php-project/project/images/childday.png', 'play time', "Get to know your children's day, what's he/she gonna eat, what are the activities planned for today", 'https://knuth.griffith.ie/~s3007693/childcare-premise-php-project/project/day_details.php');
-INSERT INTO service VALUES (5,'https://knuth.griffith.ie/~s3007693/childcare-premise-php-project/project/images/lunch.jpg', 'Lunch Service', 'Know the weekly lunch menu', 'https://knuth.griffith.ie/~s3007693/childcare-premise-php-project/project/lunch.php');
-INSERT INTO service VALUES (6,'https://knuth.griffith.ie/~s3007693/childcare-premise-php-project/project/images/bed.jpg', 'Evening sleeping bed', 'Ensuring children have enough sleep is as important as feeding them healthy food and ensuring they receive plenty of fresh air and exercise.', 'https://knuth.griffith.ie/~s3007693/childcare-premise-php-project/project/bed.php');
+INSERT INTO service VALUES (1,'https://knuth.griffith.ie/~s3022041/project/images/bus.jpg', 'School Transportation', 'Area transportation is a must for any daycare center.
+                            This includes before and after school dropoffs and pickups.
+                            This is a service that will save you both time and money', 'https://knuth.griffith.ie/~s3022041/project/bus.php');
+INSERT INTO service VALUES (2,'https://knuth.griffith.ie/~s3022041/project/images/educator.jfif', 'Trained Supervision', 'No matter how old your children are it is integral that they are left in
+                            the hands of qualified adults
+                            who will be able to care for them in all sorts of situations.
+                            At Kiddies Cove we have a selected team that is first aid certified and MAT certified', 'https://knuth.griffith.ie/~s3022041/project/supervision.php');
+INSERT INTO service VALUES (3,'https://knuth.griffith.ie/~s3022041/project/images/peer.jpg', 'Social Skill Promotion', 'One of the most important ways that children learn is through interaction
+                            with each other.
+                            Our daycare center encourage children to play, grow and learn togheter. You will soon notice
+                            yout childs social behaviour growing when they are placed in a friendly environment.', 'https://knuth.griffith.ie/~s3022041/project/skill.php');
+
+INSERT INTO service VALUES (4,'https://knuth.griffith.ie/~s3022041/project/images/childday.png', 'Daily activities', 'Get to know your childrens day, whats he/she gonna eat,
+                            what are the activities planned for today', 'https://knuth.griffith.ie/~s3022041/project/day_details.php');
+
+INSERT INTO service VALUES (5,'https://knuth.griffith.ie/~s3022041/project/images/lunch.jpg', 'Lunch Service', 'Children will eat happily at the center', 'https://knuth.griffith.ie/~s3022041/project/lunch.php');
+INSERT INTO service VALUES (6,'https://knuth.griffith.ie/~s3022041/project/images/bed.jpg', 'Evening sleeping bed', 'Ensuring children have enough sleep is as important as
+                            feeding them healthy food and ensuring they receive plenty of fresh air and exercise.', 'https://knuth.griffith.ie/~s3022041/project/bed.php');
+
 
 CREATE TABLE child(
-ID INT PRIMARY KEY AUTO_INCREMENT,
+ID INT  AUTO_INCREMENT UNIQUE,
 Category VARCHAR(100) NOT NULL,
 Day VARCHAR(100) NOT NULL,
 Fee INT (50) NOT NULL,
 username VARCHAR(100) NOT NULL,
+childname VARCHAR(100) NOT NULL,
 Email VARCHAR(100) NOT NULL UNIQUE,
 role varchar(4) DEFAULT 'user',
-password VARCHAR(100) NOT NULL
+password VARCHAR(100) NOT NULL,
+primary key (childname)
 );
 
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d26e03770012984d34b349b0dbda6f7bb3c880fb
 CREATE TABLE day(
-ID INT PRIMARY KEY AUTO_INCREMENT,
+ID INT AUTO_INCREMENT,
 date Date NOT NULL,
-name VARCHAR(100) NOT NULL,
+name VARCHAR(60) NOT NULL,
 temperature INT (100) NOT NULL,
 breakfast VARCHAR(100) NOT NULL,
 lunch VARCHAR(100) NOT NULL,
-activities varchar(100) NOT NULL
+activities varchar(100) NOT NULL,
+childname VARCHAR(100) NOT NULL,
+PRIMARY KEY (ID, childname),
+key childname(childname),
+constraint day_FK FOREIGN KEY (childname) REFERENCES child(childname) on delete cascade
 );
 
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> f6c8f239ebc48a4a75fb7e7bd3b6ca8d2dd1b7a9
->>>>>>> d26e03770012984d34b349b0dbda6f7bb3c880fb
 
