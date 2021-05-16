@@ -127,22 +127,21 @@ constraint day_FK FOREIGN KEY (childname) REFERENCES child(childname) on delete 
 );
 
 CREATE TABLE child(
-  ID INT PRIMARY KEY AUTO_INCREMENT,
-  Category VARCHAR(100) NOT NULL,
-  Day VARCHAR(100) NOT NULL,
-  FeeID int,
-  Username VARCHAR(100) NOT NULL,
-  Childname VARCHAR(100) NOT NULL,
-  Email VARCHAR(100) NOT NULL UNIQUE,
-  role varchar(4) DEFAULT 'user',
-  password VARCHAR(100) NOT NULL,
-  FOREIGN KEY (FeeID) REFERENCES fee(ID)
-);
+   ID INT PRIMARY KEY AUTO_INCREMENT,
+   Category VARCHAR(100) NOT NULL,
+   Day VARCHAR(100) NOT NULL,
+   Price int,
+   Username VARCHAR(100) NOT NULL,
+   Childname VARCHAR(100) NOT NULL,
+   Email VARCHAR(100) NOT NULL UNIQUE,
+   role varchar(4) DEFAULT 'user',
+   password VARCHAR(100) NOT NULL
+ );
 
 -- reg edit page so making the fees table
-CREATE TABLE fee(
-  ID INT PRIMARY KEY,
-  Fee INT (50) NOT NULL,
-  Day VARCHAR(100) NOT NULL,
-  Duration INT(50) Not NULL
-);
+ CREATE TABLE fee(
+   ID INT PRIMARY KEY,
+   Fee INT (50) NOT NULL,
+   Day VARCHAR(100) NOT NULL,
+   Duration INT(50) Not NULL
+ );
