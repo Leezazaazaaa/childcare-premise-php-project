@@ -17,7 +17,6 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="../Mystyle.css"> -->
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -40,7 +39,7 @@
             </a> -->
 
             <a class="navbar-brand" href="../index.php">
-                <img src="img/logo_transparent.png" width="100" height="100" alt="">
+                    <img src="img/logo_transparent.png" width="100" height="100" alt="">
             </a>
 
             <!-- Divider -->
@@ -75,7 +74,7 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="../AdminPages/registration_edit.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Edit Registration Page</span></a>
             </li>
@@ -84,7 +83,7 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link" href="day_details_edit.php">
+                <a class="nav-link" href="../index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Edit Day Details</span></a>
             </li>
@@ -93,7 +92,7 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link" href="testimonial_manage.php">
+                <a class="nav-link" href="../index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span> Mange Testimonials</span></a>
             </li>
@@ -104,11 +103,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="contact_us_manage.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span> Mange Contact</span></a>
+                    <span>  Mange Contact</span></a>
             </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
+             <!-- Divider -->
+             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -203,7 +202,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -221,8 +221,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../logout.php" data-toggle="modal"
-                                    data-target="#logoutModal">
+                                <a class="dropdown-item" href="../logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
