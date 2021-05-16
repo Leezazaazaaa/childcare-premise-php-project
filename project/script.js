@@ -33,3 +33,9 @@ function FunctionPass() {
     x.type = "password";
   }
 }
+
+function reload(){
+  setTimeout(() =>
+    window.location.href = "https://knuth.griffith.ie/~s2999960/childcare-premise-php-project/project/AdminPages/registration_edit.php"
+  , 60000);
+}
