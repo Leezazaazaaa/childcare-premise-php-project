@@ -32,12 +32,6 @@ if (mysqli_num_rows($select_result) > 0) {
   $feeArr = array();
   while($row = mysqli_fetch_assoc($select_result)) {
     array_push($feeArr, $row['Fee']);
-    // $Full1Day = $row[0]['Fee'];
-    // $Full3Day = $row[1]['Fee'];
-    // $Full5Day = $row[2]['Fee'];
-    // $Half1Day = $row[3]['Fee'];
-    // $Half3Day = $row[4]['Fee'];
-    // $Half5Day = $row[5]['Fee'];
   }
 } else {
 
@@ -54,6 +48,7 @@ if (mysqli_num_rows($select_result) > 0) {
   }
   else{
   }
+
   //checking if any of the values are empty
   if(empty($_POST['babyType'])){
     $error= true;
@@ -125,7 +120,9 @@ if (mysqli_num_rows($select_result) > 0) {
               </div>';
            	 		}
                 else{
-                  $query1 = "INSERT INTO `child` (`Category`, `Day`, `FeeID`, `UserName`, `ChildName`, `Email`, `Password`) VALUES ('$babyType', '$day', '$time', '$userName', '$childName', '$email', '$password');";
+                  print_r($time);
+                  $query1 = "INSERT INTO `child` (`Category`, `Day`, `Price`, `UserName`, `ChildName`, `Email`, `Password`) VALUES ('$babyType', '$day', '$time', '$userName', '$childName', '$email', '$password');";
+                  print_r($query1);
                   $insert_result = mysqli_query($conn, $query1);
                   if ($insert_result){
                     echo '<div class="succes-msg col-12 col-md-6">
@@ -186,9 +183,9 @@ if(!isset($_POST['add']) || (!empty($error)))
             <fieldset id = "dayCareInfo1" class="reg-option">
             <select name = "time1" id="time1" style="display:none" class="form-control">
 			           <option value = "">--Select Number of Days--</option>
-			           <option value = "$feeArr[0]"> 1 day ($<?php echo $feeArr[0];?>)</option>
-			           <option value = "$feeArr[1]"> 3 days ($<?php echo $feeArr[1];?>) </option>
-                 <option value = "$feeArr[2]"> 5 days ($<?php echo $feeArr[2];?>) </option>
+			           <option value = "<?php echo $feeArr[0];?>"> 1 day ($<?php echo $feeArr[0];?>)</option>
+			           <option value = "<?php echo $feeArr[1];?>"> 3 days ($<?php echo $feeArr[1];?>) </option>
+                 <option value = "<?php echo $feeArr[2];?>"> 5 days ($<?php echo $feeArr[2];?>) </option>
               </select>
             </fieldset>
 
@@ -198,9 +195,9 @@ if(!isset($_POST['add']) || (!empty($error)))
               <fieldset id = "dayCareInfo2" class="reg-option">
               <select name = "time2" id="time2" style="display:none" class="form-control">
   			           <option value = "">--Select Number of Days--</option>
-                   <option value = "$feeArr[3]"> 1 day ($<?php echo $feeArr[3];?>)</option>
-  			           <option value = "$feeArr[4]"> 3 days ($<?php echo $feeArr[4];?>) </option>
-                   <option value = "$feeArr[5]"> 5 days ($<?php echo $feeArr[5];?>) </option>
+                   <option value = "<?php echo $feeArr[3];?>"> 1 day ($<?php echo $feeArr[3];?>)</option>
+  			           <option value = "<?php echo $feeArr[4];?>"> 3 days ($<?php echo $feeArr[4];?>) </option>
+                   <option value = "<?php echo $feeArr[5];?>"> 5 days ($<?php echo $feeArr[5];?>) </option>
                 </select>
               </fieldset>
 
