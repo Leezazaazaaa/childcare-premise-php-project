@@ -23,6 +23,25 @@ include "header.php";
 
 
 <?php
+require "includes/mysql_connect.php";
+$select_query = "Select * from fee";
+$select_result = mysqli_query($conn, $select_query);
+
+if (mysqli_num_rows($select_result) > 0) {
+  // output data of each row
+  $feeArr = array();
+  while($row = mysqli_fetch_assoc($select_result)) {
+    array_push($feeArr, $row['Fee']);
+    // $Full1Day = $row[0]['Fee'];
+    // $Full3Day = $row[1]['Fee'];
+    // $Full5Day = $row[2]['Fee'];
+    // $Half1Day = $row[3]['Fee'];
+    // $Half3Day = $row[4]['Fee'];
+    // $Half5Day = $row[5]['Fee'];
+  }
+} else {
+
+}
  if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $errors = false;
 
@@ -95,6 +114,7 @@ include "header.php";
     $password = validate($_POST['password']);
 
     require "includes/mysql_connect.php";
+
     $query = "SELECT * FROM child WHERE Email = '$email'"; //query to check if the email exsits in the table
           			$result = mysqli_query($conn, $query);
                 if(mysqli_num_rows($result) > 0) //if exists this will be executed
@@ -166,9 +186,9 @@ if(!isset($_POST['add']) || (!empty($error)))
             <fieldset id = "dayCareInfo1" class="reg-option">
             <select name = "time1" id="time1" style="display:none" class="form-control">
 			           <option value = "">--Select Number of Days--</option>
-			           <option value = "49"> 1 day ($49)</option>
-			           <option value = "150"> 3 days ($147) </option>
-                 <option value = "250"> 5 days ($245) </option>
+			           <option value = "$feeArr[0]"> 1 day ($<?php echo $feeArr[0];?>)</option>
+			           <option value = "$feeArr[1]"> 3 days ($<?php echo $feeArr[1];?>) </option>
+                 <option value = "$feeArr[2]"> 5 days ($<?php echo $feeArr[2];?>) </option>
               </select>
             </fieldset>
 
@@ -178,9 +198,9 @@ if(!isset($_POST['add']) || (!empty($error)))
               <fieldset id = "dayCareInfo2" class="reg-option">
               <select name = "time2" id="time2" style="display:none" class="form-control">
   			           <option value = "">--Select Number of Days--</option>
-  			           <option value = "49"> 1 day ($49)</option>
-  			           <option value = "150"> 3 days ($147) </option>
-                   <option value = "250"> 5 days ($245) </option>
+                   <option value = "$feeArr[3]"> 1 day ($<?php echo $feeArr[3];?>)</option>
+  			           <option value = "$feeArr[4]"> 3 days ($<?php echo $feeArr[4];?>) </option>
+                   <option value = "$feeArr[5]"> 5 days ($<?php echo $feeArr[5];?>) </option>
                 </select>
               </fieldset>
 
