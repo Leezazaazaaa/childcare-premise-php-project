@@ -1,55 +1,59 @@
 <?php
+require('/home/s3022041/sqlC/dbConnect.php'); 
 session_start();
-if (!isset($_SESSION['User'])) {
+if(!isset($_SESSION['User'])){
 	header("Location: login.php");
 }
-include "header.php";
+
 
 ?>
 
-<style>
-#container-day {
-    background-color: none;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
-    padding: 2rem;
-    color: black;
-    font-weight: bold;
-}
-</style>
+<!DOCTYPE html>
+<html lang="en">
 
-<?php
-    if ($_SERVER['REQUEST_METHOD'] == "POST") {
-        $errors = false;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-        // calling connection
-        require('/home/s3022041/sqlC/dbConnect.php'); // sql connection
-                // displaying all the records that exist in the database
-        if (empty($_POST['date'])) {
-            $errors[] = "Search date cannot be empty!";
-        }
+<body>
+    <?php include "header.php";
+    ?>
+    <?php
 
-        if (empty($errors)) {
-            $date = validate($_POST['date']);
-
-            $_childName = $_SESSION['childname'];
-
-            $query = "SELECT * FROM day where date == '$date' and childname =='$_childName'";    // select all query
-            $query = mysqli_query($connection, $query); // exequting query
-        }
+    if(isset($_POST['search']))
+    {
+        $date=$_POST['date'];
+        
+            $query = "SELECT * FROM day where date = '$date' and name= '{$_SESSION['childName']}'";
+         // $query = "SELECT * FROM day where date = '$date'";
+         $query1 = mysqli_query($connection, $query);
+            echo $query;
+         
+        //     if (($_SESSION['Role']=="Admin"))  {
+        //     $query = "SELECT * FROM day";
+        //     $query1 = mysqli_query($connection, $query);
+            
+        // }
     }
+         // exequting query
 ?>
 
 
-<div id="container2" class="container py-5 col-12 col-md-6">
-    <form id="myform" action="day_details.php" method="POST" class="main-form">
-        <?php echo "<h4>Welcome {$_SESSION['User']}</h4>"; ?>
-        <h1> Know what the child did on a specific date </h1>
-        <input id="date" type='date' name="date" required="input" value="" min='1899-01-01' max='2000-13-13'>
-        <button type="submit" name="search" class="btn btn-primary"> Search </button>
-    </form>
-</div>
-<div id="container-day" class="container py-5 col-12 col-md-9">
+    <div id="container2" class="container py-5 col-12 col-md-6">
+        <form id="myform" action="day_details.php" method="POST" class="main-form">
+            <?php echo "<h4>Welcome {$_SESSION['User']}</h4>"; ?>
+            <?php echo "<h1>  Know what {$_SESSION['childName']} did on a specific date</h1>"; ?>
+            <input id="date" type='date' name="date" required="input" value="" min='1899-01-01' max='2000-13-13'>
+            <button type="submit" name="search" class="btn btn-primary"> Search </button>
+            <?php echo $query; 
+            echo mysqli_error($connection);
+            ?>
+
+        </form>
+    </div>
     <div class="tabl">
         <table class="table table-success table-striped" class="table-responsive">
             <thead>
@@ -63,25 +67,23 @@ include "header.php";
                     <th scope="col">Activities</th>
 
 
-
-
                 </tr>
             </thead>
 
             <?php
-                  if ($query) {
-                      foreach ($query as $row) {  // for each looping through the records
+                  if ($query1) {
+                      foreach ($query1 as $row) {  // for each looping through the records
                   ?>
 
             <tbody>
                 <tr>
-                    <td> <?php echo $row['date']; ?> </td>
+                    <td> <?php echo $row['date']; ?>
+                    </td>
                     <td> <?php echo $row['name']; ?> </td>
                     <td> <?php echo $row['temperature']; ?> </td>
                     <td> <?php echo $row['breakfast']; ?> </td>
                     <td> <?php echo $row['lunch']; ?> </td>
                     <td> <?php echo $row['activities']; ?> </td>
-
 
 
 
@@ -95,11 +97,38 @@ include "header.php";
                   } else {
                       echo "no record found"; // if no record found
                   }
-            ?>
+                  ?>
+
         </table>
     </div>
-</div>
+    <?php
+    include "footer.html";
+    ?>
+</body>
+<script>
+function showSearch() {
+    var x = document.getElementById("searched");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
+if (dd < 10) {
+    dd = '0' + dd
+}
+if (mm < 10) {
+    mm = '0' + mm
+}
 
-<?php
-include "footer.html";
-?>
+todayMin = yyyy + '-' + mm + '-' + (dd - 2);
+todayMax = yyyy + '-' + mm + '-' + (dd - 1);
+document.getElementById("date").setAttribute("max", todayMax);
+document.getElementById("date").setAttribute("min", todayMin);
+</script>
+
+</html>
