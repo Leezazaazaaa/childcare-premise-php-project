@@ -1,11 +1,11 @@
 <?php
  
- 
- 
+    // starting session
     session_start();
-    if(!isset($_SESSION['Admin'])){
+    // if not logged in as admin then go to login page
+    if (!(($_SESSION['Admin']))) {
         header("Location: ../login.php");
-    }
+  }
 
 
     // calling connection 
@@ -38,5 +38,3 @@
 }
 echo "<p>Back to <a href='index.php' class='text-dark'>Home</a> page.</p>";
 }
-
-?>

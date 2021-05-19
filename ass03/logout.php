@@ -15,16 +15,14 @@ session_start();
  }
 // if logged out then destroy the session
 if ((isset($_SESSION['Admin'])) ||  (isset($_SESSION['User']))) {
+    // destroying session
     session_unset();
     session_destroy();
     } else {
     echo "Already logged out!";
     }
 
-
 ?>
-
-
 
 <!doctype html>
 <html lang="en">
@@ -66,23 +64,20 @@ if ((isset($_SESSION['Admin'])) ||  (isset($_SESSION['User']))) {
   </head>
   <body>
 
-        
             <?php
-
-            include "header.php";
+                include "header.php";
             ?>
+
     <div class="container"> 
                     <div class="col-12 col-md-6">
 
-                   
-
+                
                          <div class="global-container">
-
-                       
+                    
 
                     <?php
                     // if logged out successfully, print the confirmation message
-                    if(!isset($_SESSION['Admin']))
+                    if(!(isset($_SESSION['Admin'])) || (isset($_SESSION['User'])))
                     {
                         echo "<div class='welcome'>$text0";
                         echo  "$text1";
@@ -126,13 +121,6 @@ if ((isset($_SESSION['Admin'])) ||  (isset($_SESSION['User']))) {
         </div>
      </div>
 
-
-
-
-
-
-
-     
             <?php
               include "footer.html" // inclding the footer
             ?>

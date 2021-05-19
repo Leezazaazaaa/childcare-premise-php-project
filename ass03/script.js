@@ -22,6 +22,31 @@ function func(event){
 
 }
 
+function reload(){
+  setTimeout(() =>
+    window.location.href = "https://knuth.griffith.ie/~s2999960/childcare-premise-php-project/project/AdminPages/registration_edit.php"
+  , 60000);
+}
+
+
+// // day details script
+// var today = new Date();
+// var dd = today.getDate();
+// var mm = today.getMonth() + 1; //January is 0!
+// var yyyy = today.getFullYear();
+// if (dd < 10) {
+//     dd = '0' + dd
+// }
+// if (mm < 10) {
+//     mm = '0' + mm
+// }
+
+// todayMin = yyyy + '-' + mm + '-' + (dd - 2);
+// todayMax = yyyy + '-' + mm + '-' + (dd - 1);
+// document.getElementById("date").setAttribute("max", todayMax);
+// document.getElementById("date").setAttribute("min", todayMin);
+
+
 
 // show passpord function
 
@@ -32,10 +57,4 @@ function FunctionPass() {
   } else {
     x.type = "password";
   }
-}
-
-function reload(){
-  setTimeout(() =>
-    window.location.href = "https://knuth.griffith.ie/~s2999960/childcare-premise-php-project/project/AdminPages/registration_edit.php"
-  , 60000);
 }
